@@ -1,4 +1,5 @@
 import { flow, types } from 'mobx-state-tree';
+import apiCall from '../api';
 
 const User = types.model('User', {
   id: types.identifier,

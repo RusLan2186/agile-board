@@ -1,3 +1,5 @@
+import qs from 'query-string';
+
 export const DOMAIN = ' http://localhost:3001/';
 
 class ApiCall {
