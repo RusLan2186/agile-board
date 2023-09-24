@@ -1,7 +1,11 @@
 import './App.scss';
+import { observer } from 'mobx-react-lite';
+import useStore from './hooks/useStore';
 
 function App() {
-  return <div>hello</div>;
+  const { users } = useStore();
+  console.log(users.toJSON());
+  return <div>helvdvdvlo</div>;
 }
 
-export default App;
+export default observer(App);

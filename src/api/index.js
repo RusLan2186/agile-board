@@ -1,6 +1,6 @@
 import qs from 'query-string';
 
-export const DOMAIN = ' http://localhost:3001/';
+export const DOMAIN = ' http://localhost:3001';
 
 class ApiCall {
   constructor(domain) {
@@ -19,7 +19,7 @@ class ApiCall {
     return await request.json();
   }
   async get(path, searchParams = {}) {
-    return await this.perform(`${path} ${qs.stringify(searchParams)}`);
+    return await this.perform(`${path}? ${qs.stringify(searchParams)}`);
   }
   async post(path, payload) {
     return await this.perform(path, payload, {
